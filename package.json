@@ -1,0 +1,32 @@
+{
+  "name": "intent-handler",
+  "version": "1.0.0",
+  "description": "A utility for the Node ASK SDK that provides readable intent flow.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mw999/intent-handler.git"
+  },
+  "author": "Matthew Williams <mw999@hotmail.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mw999/intent-handler/issues"
+  },
+  "homepage": "https://github.com/mw999/intent-handler#readme",
+  "devDependencies": {
+    "husky": "^1.1.4",
+    "lint-staged": "^8.0.5",
+    "prettier": "^1.15.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

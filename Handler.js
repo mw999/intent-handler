@@ -2,7 +2,7 @@
  * Handler class that checks whether an intent can handle a request.
  *
  * Create an instance of the class, chain the necessary checks, then call
- * isValid() to perform validation.
+ * canHandle() to perform validation.
  */
 class Handler {
   constructor(handlerInput) {
@@ -16,7 +16,7 @@ class Handler {
     this.attributes = attributes;
     this.supportedInterfaces = supportedInterfaces;
 
-    // Default to true, if at any point handler fails, set to false.
+    // Default to true, if at any point the handler fails, set to false.
     this.valid = [true];
     this.branch = 0;
   }
